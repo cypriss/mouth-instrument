@@ -8,7 +8,7 @@ Mouth-instrument is a very lightweight Ruby gem that you can use to instrument y
 
 ## Using mouth-instrument
 
-First, install the gem via you Gemfile or do so manually:
+First, install the gem via your Gemfile or do so manually:
 
     gem install mouth-instrument
 
@@ -23,7 +23,9 @@ Configure it to point to your daemon. In a Rails app, you might want to put this
 Then, instrument your app:
 
     # Count things like this:
-    Mouth.increment("myapp.occurances")
+    Mouth.increment("myapp.occurrences")          # Basic
+    Mouth.increment("myapp.occurrences", 10)      # Occurrences occurred 10 times!
+    Mouth.increment("myapp.occurrences", 1, 0.1)  # Sample at a 1/10 rate.  Lose a bit of accuracy, but sends less packets.  Good for super-high volume metrics.
     
     # Measure timings like this:
     Mouth.measure("myapp.happening") do
