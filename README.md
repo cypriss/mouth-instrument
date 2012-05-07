@@ -38,5 +38,6 @@ Then, instrument your app:
     # Gauge values like this:
     Mouth.gauge("myapp.subscriber_count", 1230) # I have 1230 customers right now!
 
-Please see the [Mouth](http://www.github.com/cypriss/mouth) project for more information!
-    
+## View your metrics
+
+Please see the [Mouth](http://www.github.com/cypriss/mouth) project for more information!  This gem plays a supporting role to core Mouth gem.
